@@ -1,307 +1,43 @@
-<style>  
-	body {
-      background-image: url('https://cdn.discordapp.com/attachments/1156125593549680652/1206961732229271654/stars.svg?ex=65dde9b5&is=65cb74b5&hm=0c15aafe1b2a2095ea28e82a7de2903a208417f8668bef24c6d395d90398f384&');
-	 		background-color: #ffffff;
-   	 	background-position: center;
-   	 	background-size: 400px 400px;
-    }
-
-  
-  .blurry-bar {
-		display: flex;
-		align-items: center;
-    position: fixed;
-		justify-content: center;
-		flex-wrap: wrap;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    z-index: 9999;
-  }
-  
-  .button {
-    color: white;
-    background-color: transparent;
-    border: none;
-    padding: 15px 35px;
-    font-size: 10px;
-    cursor: pointer;
-    transition: .5s; 
-    margin-bottom: 10px;
-  }
-  
-  .button:hover{
-		transform: scale(1.1);
-		background:transparent;
-  }
-  
-  .button_Download {
-    color: white;
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    margin-bottom: 30px;
-    padding: 20px;
-    font-size: 10px;
-    cursor: pointer;
-    transition: .5s; 
-    border-radius: 20px;
-  }
-  
-  .button_Download:hover{
-		transform: scale(1.1);
-		background: #ffffff;
-		color: #33a3ff;
-  }
-  
-	  /* Стили для контейнера с текстом и изображением */
-	.content {
-		background: rgba(0,0,0,0.7);
-		backdrop-filter: blur(8px);
-		display: flex;
-		flex-direction: row;
-    align-items: center;
-    color: white; /* Цвет текста */
-  	width: 1300px; /* Ширина будет автоматически подстраиваться под контент */
- 		margin: 200px auto 0; /* Устанавливаем автоматические отступы по горизонтали для центрирования */
- 		height: 500px;
-    padding: 100px;
-    border-radius: 40px;
-  }
-  
-  /*-------------------------------------------*/
-	/* The switch - the box around the slider */
-	.switch {
-	  position: relative;
-	  display: inline-block;
-	  width: 60px;
-	  height: 34px;
-	}
-
-	/* Hide default HTML checkbox */
-	.switch input {display:none;}
-
-	/* The slider */
-	.slider {
-	  position: absolute;
-	  cursor: pointer;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  background-color: #ccc;
-	  -webkit-transition: .4s;
-	  transition: .4s;
-	}
-
-	.slider:before {
-	  position: absolute;
-	  content: "";
-	  height: 26px;
-	  width: 26px;
-	  left: 4px;
-	  bottom: 4px;
-	  background-color: white;
-	  -webkit-transition: .4s;
-	  transition: .4s;
-	}
-
-	input:checked + .slider {
-	  background-color: #2196F3;
-	}
-
-	input:focus + .slider {
-	  box-shadow: 0 0 1px #2196F3;
-	}
-
-	input:checked + .slider:before {
-	  -webkit-transform: translateX(26px);
-	  -ms-transform: translateX(26px);
-	  transform: translateX(26px);
-	}
-
-	/* Rounded sliders */
-	.slider.round {
-	  border-radius: 34px;
-	}
-
-	.slider.round:before {
-	  border-radius: 50%;
-	}
-
-	/*-----------------------------------------*/
-		/* Кнопка выпадающего списка */
-	.dropbtn {
-	  color: white;
-    background-color: transparent;
-    border: none;
-    padding: 15px 35px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: .5s; 
-    margin-bottom: 10px;
-    font-family: Comic Sans MS;
-	}
-
-	/* Контейнер <div> - необходим для размещения выпадающ13 Февраль 2024 г. 23:23:27его содержимого */
-	.dropdown {
-	  position: relative;
-	  display: inline-block;
-	}
-
-	/* Выпадающее содержимое (скрыто по умолчанию) */
-	.dropdown-content {
-	  display: none;
-	  position: absolute;
-	  background-color: #333333;
-	  min-width: 0px;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	  z-index: 1;
-	  border-radius: 5px;
-	}
-
-	/* Ссылки внутри выпадающего списка */
-	.dropdown-content a {
-	  color: black;
-	  padding: 12px 15px;
-	  text-decoration: none;
-	  display: block;
-	  border-radius: 5px;
-	}
-
-	/* Изменение цвета выпадающих ссылок при наведении курсора */
-	.dropdown-content a:hover {
-		background-color: #737373;
-	}
-
-	/* Показать выпадающее меню при наведении курсора */
-	.dropdown:hover .dropdown-content {display: block;}
-
-	/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
-	.dropdown:hover .dropbtn {
-		transform: scale(1.1);
-		background:transparent;
-	}
-
-
-	.kauvec_adelon {
-	  font-family: Comic Sans MS;
-	  font-size: 20px;
-	  min-width: 240px;
-	  color: #ffffff;
-	  border: none;
-	  padding: 12px 16px;
-	  text-decoration: none;
-	  display: block;
-	  text-align: left;
-	  border-radius: 5px;
-	  cursor: pointer;
-	  background-color: transparent;
-	}
-		
-	.kauvec_adelon:hover {
-	  background: #737373;
-	  border-radius: 5px;
-	}
-
-</style>
-		<head>
-		<meta charset="UTF-8" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="MainCSS.css" rel="stylesheet"> </link>
+		<link href="MainMenuButtonCSS.css" rel="stylesheet"> </link>
+		<link rel="preconnect" href="https://fonts.googleapis.com/">
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 		<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+		
 		</head>
 		
-<body>
-	<title>FET - путеводитель по корпусу ФЭТ</title>
+<body style="background-image: url(&quot;https://cdn.discordapp.com/attachments/1156125593549680652/1206961733093040168/stars1.svg?ex=65dde9b5&amp;is=65cb74b5&amp;hm=2742436f03e8cce42d137a50004d85f272e47a2bf73430b3e62e8272a63f4608&amp;&quot;); background-color: rgb(0, 0, 0);">
+	<title>SuCube - проекты</title>
 		<div class="blurry-bar">
   		<img src="https://cdn.discordapp.com/attachments/1148276943914020916/1206510839469842462/SuCube.svg?ex=65dc45c8&is=65c9d0c8&hm=c8b88ed4b1a8a5290630cca5401382d06af243d4ff14dc739a3f65031966beac&" alt="SuCube" width="50" height="50" style="margin-right: 10px;">
-  		<button class="button" style="margin-right: 10px; font-family: Comic Sans MS; font-size: 20px;" >Наши проекты</button>
-  		<a href="https://drive.usercontent.google.com/download?id=168-hzQVL-VUhuecwx3ko73MsoaqDy5bZ&export=download&authuser=0&confirm=t&uuid=4da4c9ff-cf78-4da5-99a6-dd37fa7e420a&at=APZUnTXBcIUtwLvGu9XfieoOki9l%3A1707846159334" download><button class="button" style="margin-right: 10px; font-family: Comic Sans MS; font-size: 20px;">Скачать</button></a>
- 			<button class="button" style="margin-right: 10px; font-family: Comic Sans MS; font-size: 20px;">О нас</button>
-			<button class="button" style="margin-right: 100px; font-family: Comic Sans MS; font-size: 20px;" onclick="window.location.href = 'https://vk.com/sucube_studio';">Поддержка</button>
+  		<button class="button" style="margin-right: 10px; font-family: Comic Sans MS; font-size: 20px;" onclick="window.location.href = 'MainMenu.html'">Наши проекты</button>
+ 			<button class="button" style="margin-right: 10px; font-family: Comic Sans MS; font-size: 20px;" onclick="window.location.href = 'INFOSuCube.html'">О нас</button>
+			<button class="button" style="margin-right: 100px; font-family: Comic Sans MS; font-size: 20px;" onclick="window.location.href = &#39;https://vk.com/sucube_studio&#39;;">Поддержка</button>
 			<button class="button" style="margin-right: 10px; font-family: Comic Sans MS; font-size: 20px;">Войти</button>		
 			
 		<div class="dropdown">
   			<button class="dropbtn">Опции</button>
  			<div class="dropdown-content">
-  			<a href="#" style="font-family: Comic Sans MS; font-size: 20px; display: flex; align-items:center; color: #ffffff" >Тёмная тема<label class="switch" style="margin-left: 10px">
+  			<a href="https://sucube.github.io/#" style="font-family: Comic Sans MS; font-size: 20px; display: flex; align-items:center; color: #ffffff">Тёмная тема<label class="switch" style="margin-left: 10px">
   		
   			<input type="checkbox">
   			<span class="slider round"></span>
 				</label></a>
 				
 				<button class="kauvec_adelon">Настройка 2</button>
-    		<a href="#" style="color: #ffffff" class="kauvec_adelon">Настройка 3</a>
-    		<a href="#" style="color: #ffffff" class="kauvec_adelon">Настройка 4</a>
+    		<a href="https://sucube.github.io/#" style="color: #ffffff" class="kauvec_adelon">Настройка 3</a>
+    		<a href="https://sucube.github.io/#" style="color: #ffffff" class="kauvec_adelon">Настройка 4</a>
     		
  			</div>
 		</div>
 		</div>
-	
-		<div class = "content">
-			<h1 style="margin-right: 10px; font-family: play; font-size: 80px; padding: 100px"> Путеводитель по корпусу ФЭТ
-				<a style="margin-top: 10px;" href="https://drive.usercontent.google.com/download?id=168-hzQVL-VUhuecwx3ko73MsoaqDy5bZ&export=download&authuser=0&confirm=t&uuid=4da4c9ff-cf78-4da5-99a6-dd37fa7e420a&at=APZUnTXBcIUtwLvGu9XfieoOki9l%3A1707846159334" download><button class="button_Download" style="margin-right: 10px; font-family: play; font-size: 60px; color: #white; margin-top: 50px">Скачать</button></a>
-			</h1>
-
-			<img src="https://media.discordapp.net/attachments/1156125593549680652/1206932819587375104/f4db2f188b1b8cb2.png?ex=65ddcec7&is=65cb59c7&hm=58805edb7e6ec64c176ebffd4bdea704733090420e6443933996048f7c872cf8&=&format=webp&quality=lossless&width=473&height=473">
+		<div style="display: flex; justify-content: center;">
+	        <button class="image-button"><img style="width: 500px; height: 700px; border-radius: 10px;" onclick="window.location.href = 'FETGuide.html'" src="https://media.discordapp.net/attachments/1156125593549680652/1208122852910567454/FET_Main.png?ex=65e22315&is=65cfae15&hm=08d295964ba6ba82df740a0c28b8f3f8d80d6703cef2336b6b60f0c2cf78b55b&=&format=webp&quality=lossless&width=364&height=473"></img> </button>
+	        <button class="image-button"><img style="width: 500px; height: 700px; border-radius: 10px;" src="https://media.discordapp.net/attachments/1156125593549680652/1208134163790561300/BookOfTasteLOGOCS.png?ex=65e22d9e&is=65cfb89e&hm=e49831757115dae45d76164d127acfddf4cd78ec9c6489dcd26022a4ce08144e&=&format=webp&quality=lossless&width=364&height=473"></img> </button>
 		</div>
-		
-		<div class="content" style="height: 3000px; width: 1450px; align-items: start; margin: 150px auto 0; display: block; padding: 10px;">
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; padding-left: 80px;"> <!-- Добавляем обертку для текста и изображения -->
-        <div>
-            <h1 style="font-family: play; font-size: 50px; padding-top: 70px; color: #33a3ff;">Эксклюзив</h1>
-            <h1 style="font-family: play; font-size: 30px; max-width: 650px;">Первый и единственный 3D-путеводитель по корпусу ФЭТ</h1>
-        </div>
-        <img style="float: right; margin-left: auto; margin-right: 120px; height: 240px; width:500px;" src="https://media.discordapp.net/attachments/1156125593549680652/1207680642670919700/FEEEET.png?ex=65e0873e&is=65ce123e&hm=2e641cfa119f355336c1f11249dd6436a3ab9123c6aa404c69eaeab3ce74595b&=&format=webp&quality=lossless"> <!-- Изображение с использованием float и margin -->
-    </div>
-    
-    <div style="display: flex; flex-direction: row-reverse; align-items: flex-end; justify-content: space-between; padding-left: 80px;"> <!-- Добавляем обертку для текста и изображения -->
-        <div>
-            <h1 style="font-family: play; font-size: 50px; padding-top: 70px; color: #33a3ff;">Бесплатно</h1>
-            <h1 style="font-family: play; font-size: 30px; max-width: 650px; padding-right: 80px;">Наш путеводитель абсолютно бесплатный и будет таковым всегда. Вы не потратите ни копейки!  </h1>
-        </div>
-        <img style="float: right; margin-left: auto; margin-right: 240px; height: 250px; width:250px;" src="https://cdn.discordapp.com/attachments/1156125593549680652/1207662387298172978/40221.png?ex=65e0763e&is=65ce013e&hm=bc19747e064c8a76971c5f8ba02bc1cdd6ac3b9b241b67a9d634bb2da2d639a8&"> <!-- Изображение с использованием float и margin -->
-    </div>
-    
 </div>
+</html>
 
 
-
-
-
-    
-</body>
-
-<script>
-
-
-const themeToggle = document.querySelector('input[type="checkbox"]');
-const body = document.querySelector('body');
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-// Проверяем, какая тема предпочтительна в системе
-if (prefersDarkScheme.matches) {
-  // Если предпочтительна темная тема, устанавливаем переключатель в положение "включено"
-  themeToggle.checked = true;
-  body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1156125593549680652/1206961733093040168/stars1.svg?ex=65dde9b5&is=65cb74b5&hm=2742436f03e8cce42d137a50004d85f272e47a2bf73430b3e62e8272a63f4608&')";
-  body.style.backgroundColor = "#000000";
-}
-
-themeToggle.addEventListener('change', function() {
-  if (this.checked) {
-    body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1156125593549680652/1206961733093040168/stars1.svg?ex=65dde9b5&is=65cb74b5&hm=2742436f03e8cce42d137a50004d85f272e47a2bf73430b3e62e8272a63f4608&')";
-    body.style.backgroundColor = "#000000";
-    // Добавьте другие стили для темной темы
-  } else {
-    body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1156125593549680652/1206961732229271654/stars.svg?ex=65dde9b5&is=65cb74b5&hm=0c15aafe1b2a2095ea28e82a7de2903a208417f8668bef24c6d395d90398f384&')";
-    body.style.backgroundColor = "#ffffff";
-    // Добавьте другие стили для светлой темы
-  }
-});
-
-
-</script>
-
+<script src="MainJS.js"></script>
