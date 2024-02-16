@@ -1,0 +1,20 @@
+.image-button {
+      /*background-image: url('https://media.discordapp.net/attachments/1156125593549680652/1208098286309867640/FET_Main.png?ex=65e20c34&is=65cf9734&hm=5e99a0ededd4db34dff063ac8a339ab70f6b42a8e9da29f2ab875afb43831234&=&format=webp&quality=lossless&width=364&height=473');*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      cursor: pointer;
+      transition: .5s; 
+	  align-items: center;
+      justify-content: center;
+	  width: 503px;
+      height: 703px;
+	  margin-top: 150px;
+	  margin:100px;
+	  border:none;
+    }
+	
+.image-button:hover {
+      transform: scale(1.1);
+    }
