@@ -1,0 +1,207 @@
+ 
+	body {
+      background-image: url('https://cdn.discordapp.com/attachments/1156125593549680652/1206961732229271654/stars.svg?ex=65dde9b5&is=65cb74b5&hm=0c15aafe1b2a2095ea28e82a7de2903a208417f8668bef24c6d395d90398f384&');
+	 		background-color: #ffffff;
+   	 	background-position: center;
+   	 	background-size: 400px 400px;
+    }
+
+  
+  .blurry-bar {
+		display: flex;
+		align-items: center;
+    position: fixed;
+		justify-content: center;
+		flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+  }
+  
+  .button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 15px 35px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: .5s; 
+    margin-bottom: 10px;
+  }
+  
+  .button:hover{
+		transform: scale(1.1);
+		background:transparent;
+  }
+  
+  .button_Download {
+    color: white;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: .5s; 
+    border-radius: 20px;
+  }
+  
+  .button_Download:hover{
+		transform: scale(1.1);
+		background: #ffffff;
+		color: #33a3ff;
+  }
+  
+	  /* Стили для контейнера с текстом и изображением */
+	.content {
+		background: rgba(0,0,0,0.7);
+		backdrop-filter: blur(8px);
+		display: flex;
+		flex-direction: row;
+    align-items: center;
+    color: white; /* Цвет текста */
+  	width: 1300px; /* Ширина будет автоматически подстраиваться под контент */
+ 		margin: 200px auto 0; /* Устанавливаем автоматические отступы по горизонтали для центрирования */
+ 		height: 500px;
+    padding: 100px;
+    border-radius: 40px;
+  }
+  
+  /*-------------------------------------------*/
+	/* The switch - the box around the slider */
+	.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 60px;
+	  height: 34px;
+	}
+
+	/* Hide default HTML checkbox */
+	.switch input {display:none;}
+
+	/* The slider */
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 26px;
+	  width: 26px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	input:checked + .slider {
+	  background-color: #2196F3;
+	}
+
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+	  border-radius: 34px;
+	}
+
+	.slider.round:before {
+	  border-radius: 50%;
+	}
+
+	/*-----------------------------------------*/
+		/* Кнопка выпадающего списка */
+	.dropbtn {
+	  color: white;
+    background-color: transparent;
+    border: none;
+    padding: 15px 35px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s; 
+    margin-bottom: 10px;
+    font-family: Comic Sans MS;
+	}
+
+	/* Контейнер <div> - необходим для размещения выпадающ13 Февраль 2024 г. 23:23:27его содержимого */
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+	}
+
+	/* Выпадающее содержимое (скрыто по умолчанию) */
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #333333;
+	  min-width: 0px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	  border-radius: 5px;
+	}
+
+	/* Ссылки внутри выпадающего списка */
+	.dropdown-content a {
+	  color: black;
+	  padding: 12px 15px;
+	  text-decoration: none;
+	  display: block;
+	  border-radius: 5px;
+	}
+
+	/* Изменение цвета выпадающих ссылок при наведении курсора */
+	.dropdown-content a:hover {
+		background-color: #737373;
+	}
+
+	/* Показать выпадающее меню при наведении курсора */
+	.dropdown:hover .dropdown-content {display: block;}
+
+	/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+	.dropdown:hover .dropbtn {
+		transform: scale(1.1);
+		background:transparent;
+	}
+
+
+	.kauvec_adelon {
+	  font-family: Comic Sans MS;
+	  font-size: 20px;
+	  min-width: 240px;
+	  color: #ffffff;
+	  border: none;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  background-color: transparent;
+	}
+		
+	.kauvec_adelon:hover {
+	  background: #737373;
+	  border-radius: 5px;
+	}
