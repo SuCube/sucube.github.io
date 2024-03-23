@@ -30,7 +30,7 @@
     font-size: 10px;
     cursor: pointer;
     transition: .5s; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
   .button:hover{
@@ -141,7 +141,7 @@
     font-size: 20px;
     cursor: pointer;
     transition: .5s; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: Comic Sans MS;
 	}
 
