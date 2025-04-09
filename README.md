@@ -1,2 +1,2 @@
 # sucube.github.io
-Team site
+Team site with some of our projects
