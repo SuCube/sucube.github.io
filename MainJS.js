@@ -8,7 +8,7 @@ if (prefersDarkScheme.matches) {
   themeToggle.checked = true;
   body.style.backgroundImage = "url('https://drive.google.com/thumbnail?sz=w1920&id=10MzQXYPzJaUeukK58XjrM6WLicZ1wu2H')";
   body.style.backgroundColor = "#000000";
-}
+} 
 
 themeToggle.addEventListener('change', function() {
   if (this.checked) {
